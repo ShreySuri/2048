@@ -40,6 +40,27 @@ print(list_2)
 print(list_3)
 print(list_4)
 print("")
-print("")
+
+game = True
+
+while game == True:
+	imput_1 = input(print(""))
+	if input == "w":
+		num_1 = 0
+		num_2 = 4
+		for i in range (0, 4):
+			temp_val = 0
+			for i in range (num_1, num_2):
+				temp_val = temp_val + full_char_list[i]
+			full_char_list[num_1] = temp_val
+			num_1 = num_1 + 1
+			for i in range (num_1, num_2):
+				full_char_list[i] = 0
+			num_1 = num_1 + 1
+			num_2 = num_2 + 4
+	elif 
+
+
+
 
 
