@@ -33,18 +33,38 @@ def forward(list_1):
 		else:
 			toggle = True
 
-	list_1 = []
+	list_2 = []
 	counter = 0
 	for i in range (0, 4):
 		if temp_list[i] != 0:
 			x = temp_list[i]
-			list_1.append(x)
+			list_2.append(x)
 		else:
 			counter = counter + 1
 	for j in range (0, counter):
-		list_1.append(0)
+		list_2.append(0)
 
-	return(list_1)
+	return(list_2)
+
+def backward(list_1):
+	temp_list = forward(list_1)
+	list_2 = []
+	counter = 0
+	for i in range (0, 4):
+		if temp_list[i] == 0:
+			counter = counter + 1
+		else:
+			toggle = False
+
+	for i in range (0, counter):
+		list_2.append(0)
+	counter = 4 - counter
+
+	for i in range (0, counter):
+		x = temp_list[i]
+		list_2.append(x)
+
+	return(list_2)
 
 
 
