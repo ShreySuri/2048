@@ -14,7 +14,6 @@ def base_4(int_1):
 
 def forward(list_1):
 	temp_list = []
-
 	counter = 0
 	for i in range (0, 4):
 		if list_1[i] != 0:
@@ -34,17 +33,18 @@ def forward(list_1):
 		else:
 			toggle = True
 
+	list_1 = []
 	counter = 0
 	for i in range (0, 4):
-		if list_1[i] != 0:
-			x = list_1[i]
-			temp_list.append(x)
+		if temp_list[i] != 0:
+			x = temp_list[i]
+			list_1.append(x)
 		else:
 			counter = counter + 1
 	for j in range (0, counter):
-		temp_list.append(0)
+		list_1.append(0)
 
-	return(temp_list)
+	return(list_1)
 
 
 
