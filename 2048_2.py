@@ -6,6 +6,10 @@ def base_4(int_1):
 	final_int = 10 * quotient + rem
 	return(final_int)
 
+# [00, 01, 02, 03]
+# [10, 11, 12, 13]
+# [20, 21, 22, 23]
+# [30, 31, 32, 33]
 
 
 master_list = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -29,5 +33,12 @@ column_2 = []
 column_3 = []
 column_3 = []
 
-
+for i in range (0, 16):
+	base_int = base_4(i)
+	value = master_list[i]
+	
+	if base_int >= 0 and base_int < 10:
+		row_1.append(value)
+	elif base_int >= 10 and base_int < 20:
+		row_1
 
