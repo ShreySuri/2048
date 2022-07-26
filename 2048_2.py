@@ -14,6 +14,7 @@ def base_4(int_1):
 
 def forward(list_1):
 	temp_list = []
+
 	counter = 0
 	for i in range (0, 4):
 		if list_1[i] != 0:
@@ -24,7 +25,26 @@ def forward(list_1):
 	for j in range (0, counter):
 		temp_list.append(0)
 	
+	for i in range (0, 3):
+		if temp_list[i] == temp_list[i + 1]:
+			x = temp_list[i]
+			x = 2 * x
+			temp_list[i] = x
+			temp_list[i + 1] = 0
+		else:
+			toggle = True
 
+	counter = 0
+	for i in range (0, 4):
+		if list_1[i] != 0:
+			x = list_1[i]
+			temp_list.append(x)
+		else:
+			counter = counter + 1
+	for j in range (0, counter):
+		temp_list.append(0)
+
+	return(temp_list)
 
 
 
