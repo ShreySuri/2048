@@ -156,3 +156,41 @@ while game = True:
 	else:
 		print("Something went wrong.")
 
+	if sync = "column to row":
+		master_list = []
+		x = column_1[0]
+		master_list.append(x)
+		x = column_2[0]
+		master_list.append(x)
+		x = column_3[0]
+		master_list.append(x)
+		x = column_4[0]
+		master_list.append(x)
+		x = column_1[1]
+		master_list.append(x)
+		x = column_2[1]
+		master_list.append(x)
+		x = column_3[1]
+		master_list.append(x)
+		x = column_4[1]
+		master_list.append(x)
+		x = column_1[2]
+		master_list.append(x)
+		x = column_2[2]
+		master_list.append(x)
+		x = column_3[2]
+		master_list.append(x)
+		x = column_4[2]
+		master_list.append(x)
+		x = column_1[3]
+		master_list.append(x)
+		x = column_2[3]
+		master_list.append(x)
+		x = column_3[3]
+		master_list.append(x)
+		x = column_4[3]
+		master_list.append(x)
+
+		
+
+
