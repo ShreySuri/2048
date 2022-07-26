@@ -12,6 +12,22 @@ def base_4(int_1):
 # [30, 31, 32, 33]
 
 
+def forward(list_1):
+	temp_list = []
+	counter = 0
+	for i in range (0, 4):
+		if list_1[i] != 0:
+			x = list_1[i]
+			temp_list.append(x)
+		else:
+			counter = counter + 1
+	for j in range (0, counter):
+		temp_list.append(0)
+	
+
+
+
+
 master_list = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 x = random.randint(0, 159):
@@ -54,4 +70,22 @@ for i in range (0, 16):
 		column_2.append(value)
 	elif base_int % 10 == 2:
 		column_3.append(value)
+	elif base_int % 10 == 3:
+		column_4.append(value)
+	else:
+		print("Something went wrong.")
+
+print(row_1)
+print(row_2)
+print(row_3)
+print(row_4)
+
+
+input_1 = "None"
+while input_1 != "w" and input_1 != "a" and input_1 != "s" and_1 input_1 != "d":
+	input_1 = input(print("Use w, a, s, and, d, keys to play. "))
+	input_1 = input_1.lower()
+
+if input_1 = "w":
+
 
