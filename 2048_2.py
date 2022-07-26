@@ -31,7 +31,7 @@ row_4 = []
 column_1 = []
 column_2 = []
 column_3 = []
-column_3 = []
+column_4 = []
 
 for i in range (0, 16):
 	base_int = base_4(i)
@@ -40,5 +40,18 @@ for i in range (0, 16):
 	if base_int >= 0 and base_int < 10:
 		row_1.append(value)
 	elif base_int >= 10 and base_int < 20:
-		row_1
+		row_2.append(value)
+	elif base_int >= 20 and base_int < 30:
+		row_3.append(value)
+	elif base_int >= 30 and base_int < 40:
+		row_4.append(value)
+	else:
+		print("Something went wrong.")
+
+	if base_int % 10 == 0:
+		column_1.append(value)
+	elif base_int % 10 == 1:
+		column_2.append(value)
+	elif base_int % 10 == 2:
+		column_3.append(value)
 
