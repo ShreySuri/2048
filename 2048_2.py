@@ -207,10 +207,10 @@ while game = True:
 				print("Something went wrong.")
 
 		for i in range (0, 4):
-			row_1.pop[0]
-			row_2.pop[0]
-			row_3.pop[0]
-			row_4.pop[0]
+			row_1.pop(0)
+			row_2.pop(0)
+			row_3.pop(0)
+			row_4.pop(0)
 
 	elif sync = "row to column":
 		master_list = []
@@ -263,9 +263,15 @@ while game = True:
 				print("Something went wrong.")
 
 		for i in range (0, 4):
-			column_1.pop[0]
-			column_2.pop[0]
-			column_3.pop[0]
-			column_4.pop[0]
+			column_1.pop(0)
+			column_2.pop(0)
+			column_3.pop(0)
+			column_4.pop(0)
+
+	else:
+		print("Something went wrong.")
+
+
+
 
 
