@@ -191,6 +191,81 @@ while game = True:
 		x = column_4[3]
 		master_list.append(x)
 
-		
+		for i in range (0, 16):
+			base_int = base_4(i)
+			value = master_list[i]
+	
+			if base_int >= 0 and base_int < 10:
+				row_1.append(value)
+			elif base_int >= 10 and base_int < 20:
+				row_2.append(value)
+			elif base_int >= 20 and base_int < 30:
+				row_3.append(value)
+			elif base_int >= 30 and base_int < 40:
+				row_4.append(value)
+			else:
+				print("Something went wrong.")
+
+		for i in range (0, 4):
+			row_1.pop[0]
+			row_2.pop[0]
+			row_3.pop[0]
+			row_4.pop[0]
+
+	elif sync = "row to column":
+		master_list = []
+		x = row_1[0]
+		master_list.append(x)
+		x = row_1[1]
+		master_list.append(x)
+		x = row_1[2]
+		master_list.append(x)
+		x = row_1[3]
+		master_list.append(x)
+		x = row_2[0]
+		master_list.append(x)
+		x = row_2[1]
+		master_list.append(x)
+		x = row_2[2]
+		master_list.append(x)
+		x = row_2[3]
+		master_list.append(x)
+		x = row_3[0]
+		master_list.append(x)
+		x = row_3[1]
+		master_list.append(x)
+		x = row_3[2]
+		master_list.append(x)
+		x = row_3[3]
+		master_list.append(x)
+		x = row_4[0]
+		master_list.append(x)
+		x = row_4[1]
+		master_list.append(x)
+		x = row_4[2]
+		master_list.append(x)
+		x = row_4[3]
+		master_list.append(x)
+
+		for i in range (0, 16):
+			base_int = base_4(i)
+			value = master_list[i]
+
+			if base_int % 10 == 0:
+				column_1.append(value)
+			elif base_int % 10 == 1:
+				column_2.append(value)
+			elif base_int % 10 == 2:
+				column_3.append(value)
+			elif base_int % 10 == 3:
+				column_4.append(value)
+			else:
+				print("Something went wrong.")
+
+		for i in range (0, 4):
+			column_1.pop[0]
+			column_2.pop[0]
+			column_3.pop[0]
+			column_4.pop[0]
 
 
