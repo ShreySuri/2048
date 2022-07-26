@@ -120,12 +120,39 @@ print(row_2)
 print(row_3)
 print(row_4)
 
+game = True
 
-input_1 = "None"
-while input_1 != "w" and input_1 != "a" and input_1 != "s" and_1 input_1 != "d":
-	input_1 = input(print("Use w, a, s, and, d, keys to play. "))
-	input_1 = input_1.lower()
+while game = True:
+	
+	input_1 = "None"
+	while input_1 != "w" and input_1 != "a" and input_1 != "s" and_1 input_1 != "d":
+		input_1 = input(print("Use w, a, s, and, d, keys to play. "))
+		input_1 = input_1.lower()
 
-if input_1 = "w":
-
+	if input_1 = "w":
+		column_1 = forward(column_1)
+		column_2 = forward(column_2)
+		column_3 = forward(column_3)
+		column_4 = forward(column_4)
+		sync = "column to row"
+	elif input_1 = "a":
+		row_1 = forward(row_1)
+		row_2 = forward(row_2)
+		row_3 = forward(row_3)
+		row_4 = forward(row_4)
+		sync = "row to column"
+	elif input_1 = "s":
+		column_1 = backward(column_1)
+		column_2 = backward(column_2)
+		column_3 = backward(column_3)
+		column_4 = backward(column_4)
+		sync = "column to row"
+	elif input_1 = "d":
+		row_1 = backward(row_1)
+		row_2 = backward(row_2)
+		row_3 = backward(row_3)
+		row_4 = backward(row_4)
+		sync = "row to column"
+	else:
+		print("Something went wrong.")
 
