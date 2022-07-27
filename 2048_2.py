@@ -69,6 +69,7 @@ def backward(list_1):
 
 
 master_list = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+highest_num = 0
 
 x = random.randint(0, 159):
 y = x % 16
@@ -126,6 +127,7 @@ while game = True:
 	
 	input_1 = "None"
 	while input_1 != "w" and input_1 != "a" and input_1 != "s" and_1 input_1 != "d":
+		print("")
 		input_1 = input(print("Use w, a, s, and, d, keys to play. "))
 		input_1 = input_1.lower()
 
@@ -318,9 +320,38 @@ while game = True:
 			row_3[ones] = num
 		elif tens == 3:
 			row_4[ones] = num
+		else:
+			print("Something went wrong.")
 
 
+		for i in range (0, 16):
+			x = master_list[i]
+			if x > highest_num:
+				highest_num = x
+			else:
+				toggle = True
 
+		if highest_num == 2048:
+			game = False
+			win = True
+		else:
+			print("")
+			print(row_1)
+			print(row_2)
+			print(row_3)
+			print(row_4)
+
+	else:
+		game = False
+		win = False
+
+
+if win == True:
+	print("")
+	print("You Won!")
+else:
+	print("")
+	print("You Lost!")
 
 
 
