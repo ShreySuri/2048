@@ -272,6 +272,59 @@ while game = True:
 		print("Something went wrong.")
 
 
+	index_list = []
+	index_length = 0
+	for i in range (0, 16):
+		if master_list[i] == 0:
+			index_list.append(i)
+			index_length = index_length + 1
+		else:
+			toggle = False
+
+	if index_length > 0:
+		high_int = 10 * index_length - 1
+		x = random.randint(0, high_int)
+		y = x % index_length
+		z = int((x - y)/index_length)
+		picker = index_list[y]
+
+		if z == 0:
+			master_list[picker] = 4
+			num = 4
+		else:
+			master_list[picker] = 2
+			num = 2
+
+		y = base_4(y)
+		ones = y % 10
+		tens = int((y - ones)/10)
+
+		if ones == 0:
+			column_1[tens] = num
+		elif ones == 1:
+			column_2[tens] = num
+		elif ones == 2:
+			column_3[tens] = num
+		elif ones == 3:
+			column_4[tens] = num
+		else:
+			print("Something went wrong.")
+
+		if tens == 0:
+			row_1[ones] = num
+		elif tens == 1:
+			row_2[ones] = num
+		elif tens == 2:
+			row_3[ones] = num
+		elif tens == 3:
+			row_4[ones] = num
+
+
+
+
+
+
+	
 
 
 
