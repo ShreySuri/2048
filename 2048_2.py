@@ -71,7 +71,7 @@ def backward(list_1):
 master_list = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 highest_num = 0
 
-x = random.randint(0, 159):
+x = random.randint(0, 159)
 y = x % 16
 z = int((x - y)/16)
 
@@ -123,33 +123,33 @@ print(row_4)
 
 game = True
 
-while game = True:
+while game == True:
 	
 	input_1 = "None"
-	while input_1 != "w" and input_1 != "a" and input_1 != "s" and_1 input_1 != "d":
+	while input_1 != "w" and input_1 != "a" and input_1 != "s" and input_1 != "d":
 		print("")
 		input_1 = input(print("Use w, a, s, and, d, keys to play. "))
 		input_1 = input_1.lower()
 
-	if input_1 = "w":
+	if input_1 == "w":
 		column_1 = forward(column_1)
 		column_2 = forward(column_2)
 		column_3 = forward(column_3)
 		column_4 = forward(column_4)
 		sync = "column to row"
-	elif input_1 = "a":
+	elif input_1 == "a":
 		row_1 = forward(row_1)
 		row_2 = forward(row_2)
 		row_3 = forward(row_3)
 		row_4 = forward(row_4)
 		sync = "row to column"
-	elif input_1 = "s":
+	elif input_1 == "s":
 		column_1 = backward(column_1)
 		column_2 = backward(column_2)
 		column_3 = backward(column_3)
 		column_4 = backward(column_4)
 		sync = "column to row"
-	elif input_1 = "d":
+	elif input_1 == "d":
 		row_1 = backward(row_1)
 		row_2 = backward(row_2)
 		row_3 = backward(row_3)
@@ -158,7 +158,7 @@ while game = True:
 	else:
 		print("Something went wrong.")
 
-	if sync = "column to row":
+	if sync == "column to row":
 		master_list = []
 		x = column_1[0]
 		master_list.append(x)
@@ -214,7 +214,7 @@ while game = True:
 			row_3.pop(0)
 			row_4.pop(0)
 
-	elif sync = "row to column":
+	elif sync == "row to column":
 		master_list = []
 		x = row_1[0]
 		master_list.append(x)
