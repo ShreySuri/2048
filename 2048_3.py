@@ -233,9 +233,11 @@ while game == True:
 
 
         y = 1
-        while y != 0:
+        gen_count = 0
+        while y != 0 or gen_count == 100:
             x = random.randint(0, 15)
             y = master_list[x]
+            gen_count = gen_count + 1
 
         master_list[x] = 2
         num = 2
@@ -311,10 +313,26 @@ while game == True:
         column_4[3] = temp_val
 
 
+        for i in range (0, 16):
+		x = master_list[i]
+		if x > highest_num:
+			highest_num = x
+		else:
+			toggle = True
+
+	if highest_num == 2048:
+		game = False
+		win = True
+	elif gen_count == 100:
+                game = False
+                win = False
+        else:
+		print("")
+		print(row_1)
+		print(row_2)
+		print(row_3)
+		print(row_4)
         
-
-
-
 	
 if win == True:
 	print("")
