@@ -238,13 +238,21 @@ while game == True:
             y = master_list[x]
 
         master_list[x] = 2
+        num = 2
         z = random.randint(0, 9)
         if z == 0:
-            master_list[x] = 2 * master_list[x]
+            master_list[x] = 4
+            num = 4
         else:
             toggle = False
 
+        temp_val = master_list[0]
+        row_1[0] = temp_val
+        column_1[0] = tempval
+        temp_val
 
+
+        
 
 
 
