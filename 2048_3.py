@@ -136,29 +136,29 @@ while game == True:
 		column_2 = forward(column_2)
 		column_3 = forward(column_3)
 		column_4 = forward(column_4)
-		sync = "column to row"
+		sync = "column"
 	elif input_1 == "a":
 		row_1 = forward(row_1)
 		row_2 = forward(row_2)
 		row_3 = forward(row_3)
 		row_4 = forward(row_4)
-		sync = "row to column"
+		sync = "row"
 	elif input_1 == "s":
 		column_1 = backward(column_1)
 		column_2 = backward(column_2)
 		column_3 = backward(column_3)
 		column_4 = backward(column_4)
-		sync = "column to row"
+		sync = "column"
 	elif input_1 == "d":
 		row_1 = backward(row_1)
 		row_2 = backward(row_2)
 		row_3 = backward(row_3)
 		row_4 = backward(row_4)
-		sync = "row to column"
+		sync = "row"
 	else:
 		print("Something went wrong.")
 
-	if sync == "column to row":
+	if sync == "column":
 		master_list = []
 		x = column_1[0]
 		master_list.append(x)
@@ -193,7 +193,7 @@ while game == True:
 		x = column_4[3]
 		master_list.append(x)
 
-	elif sync == "row to column":
+	elif sync == "row":
 		master_list = []
 		x = row_1[0]
 		master_list.append(x)
@@ -232,78 +232,23 @@ while game == True:
 		print("Something went wrong.")
 
 
-	index_list = []
-	index_length = 0
-	for i in range (0, 16):
-		if master_list[i] == 0:
-			index_list.append(i)
-			index_length = index_length + 1
-		else:
-			toggle = False
+        y = 1
+        while y != 0:
+            x = random.randint(0, 15)
+            y = master_list[x]
 
-	if index_length > 0:
-		high_int = 10 * index_length - 1
-		x = random.randint(0, high_int)
-		y = x % index_length
-		z = int((x - y)/index_length)
-		picker = index_list[y]
-
-		if z == 0:
-			master_list[picker] = 4
-			num = 4
-		else:
-			master_list[picker] = 2
-			num = 2
-
-		y = base_4(y)
-		ones = y % 10
-		tens = int((y - ones)/10)
-
-		if ones == 0:
-			column_1[tens] = num
-		elif ones == 1:
-			column_2[tens] = num
-		elif ones == 2:
-			column_3[tens] = num
-		elif ones == 3:
-			column_4[tens] = num
-		else:
-			print("Something went wrong.")
-
-		if tens == 0:
-			row_1[ones] = num
-		elif tens == 1:
-			row_2[ones] = num
-		elif tens == 2:
-			row_3[ones] = num
-		elif tens == 3:
-			row_4[ones] = num
-		else:
-			print("Something went wrong.")
+        master_list[x] = 2
+        z = random.randint(0, 9)
+        if z == 0:
+            master_list[x] = 2 * master_list[x]
+        else:
+            toggle = False
 
 
-		for i in range (0, 16):
-			x = master_list[i]
-			if x > highest_num:
-				highest_num = x
-			else:
-				toggle = True
-
-		if highest_num == 2048:
-			game = False
-			win = True
-		else:
-			print("")
-			print(row_1)
-			print(row_2)
-			print(row_3)
-			print(row_4)
-
-	else:
-		game = False
-		win = False
 
 
+
+	
 if win == True:
 	print("")
 	print("You Won!")
