@@ -248,8 +248,67 @@ while game == True:
 
         temp_val = master_list[0]
         row_1[0] = temp_val
-        column_1[0] = tempval
-        temp_val
+        column_1[0] = temp_val
+        
+        temp_val = master_list[1]
+        row_1[1] = temp_val
+        column_2[0] = temp_val
+        
+        temp_val = master_list[2]
+        row_1[2] = temp_val
+        column_3[0] = temp_val
+        
+        temp_val = master_list[3]
+        row_1[3] = temp_val
+        column_4[0] = temp_val
+        
+        temp_val = master_list[4]
+        row_2[0] = temp_val
+        column_1[1] = temp_val
+        
+        temp_val = master_list[5]
+        row_2[1] = temp_val
+        column_2[1] = temp_val
+        
+        temp_val = master_list[6]
+        row_2[2] = temp_val
+        column_3[1] = temp_val
+        
+        temp_val = master_list[7]
+        row_2[3] = temp_val
+        column_4[1] = temp_val
+        
+        temp_val = master_list[8]
+        row_3[0] = temp_val
+        column_1[2] = temp_val
+        
+        temp_val = master_list[9]
+        row_3[1] = temp_val
+        column_2[2] = temp_val
+        
+        temp_val = master_list[10]
+        row_3[2] = temp_val
+        column_3[2] = temp_val
+        
+        temp_val = master_list[11]
+        row_3[3] = temp_val
+        column_4[2] = temp_val
+        
+        temp_val = master_list[12]
+        row_4[0] = temp_val
+        column_1[3] = temp_val
+        
+        temp_val = master_list[13]
+        row_4[1] = temp_val
+        column_2[3] = temp_val
+        
+        temp_val = master_list[14]
+        row_4[2] = temp_val
+        column_3[3] = temp_val
+        
+        temp_val = master_list[15]
+        row_4[3] = temp_val
+        column_4[3] = temp_val
 
 
         
