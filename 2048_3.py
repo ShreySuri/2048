@@ -325,8 +325,19 @@ while game == True:
 		win = True
 
 	elif gen_count == 100:
-                game = False
-                win = False
+        game = False
+        win = False
+
+    final_check = False
+    for i in range (0, 4):
+    	for j in range (0, 3):
+    		x = 4 * i + j
+    		if master_list[x] == master_list[x + 1]:
+    			final_check = True
+    		else:
+    			final_check = False
+
+    
 
     else:
 		print("")
