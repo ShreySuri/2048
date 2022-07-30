@@ -335,9 +335,21 @@ while game == True:
     		if master_list[x] == master_list[x + 1]:
     			final_check = True
     		else:
-    			final_check = False
+    			final_check = final_check
 
-    
+    for i in range (0, 4):
+    	for j in range (0, 3):
+    		x = 4 * j + i
+    		if master_list[x] == master_list[x + 4]:
+    			final_check = True
+    		else:
+    			final_check = final_check
+
+    if final_check = True:
+    	toggle = True:
+    else:
+    	game = False
+    	win = False
 
     else:
 		print("")
