@@ -232,8 +232,8 @@ while game == True:
 		print("Something went wrong.")
 
 
-        y = 1
-        gen_count = 0
+    y = 1
+    gen_count = 0
     while y != 0 and gen_count < 100:
         x = random.randint(0, 15)
         y = master_list[x]
