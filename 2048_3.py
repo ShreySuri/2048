@@ -351,12 +351,11 @@ while game == True:
     	game = False
     	win = False
 
-    else:
-		print("")
-		print(row_1)
-		print(row_2)
-		print(row_3)
-		print(row_4)
+	print("")
+	print(row_1)
+	print(row_2)
+	print(row_3)
+	print(row_4)
         
 	
 if win == True:
