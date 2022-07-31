@@ -316,7 +316,7 @@ while game == True:
                         if master_list[x] == master_list[x + 1]:
                                 final_check = True
                         else:
-                                togggle = False
+                                togggle = True
 
         for i in range (0, 4):
                 for j in range (0, 3):
@@ -334,25 +334,25 @@ while game == True:
                 else:
                         toggle = True
 
+        print("")
+        print(row_1)
+        print(row_2)
+        print(row_3)
+        print(row_4)
+
         if highest_num == 2048:
                 game = False
                 win = True
+        elif gen_count = 100:
+                game = False
+                win = True
+        elif final_check = False:
+                game = False
+                win = False
+        else:
+                toggle = False
 
-        elif 
-
-        if final_check = True:
-    	toggle = True:
-    else:
-    	game = False
-    	win = False
-
-	print("")
-	print(row_1)
-	print(row_2)
-	print(row_3)
-	print(row_4)
-        
-	
+ 	
 if win == True:
 	print("")
 	print("You Won!")
