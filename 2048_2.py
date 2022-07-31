@@ -66,6 +66,23 @@ def backward(list_1):
 
 	return(list_2)
 
+def spacing(list_1):
+	fin_str = ""
+	for i in range (0, 4):
+		x = list_1[i]
+		if x >= 1 and x < 10:
+			str_1 = "     %s" % x 
+		elif x >= 10 and x < 100:
+			str_1 = "    %s" % x
+		elif x >= 100 and x < 1000:
+			str_1 = "   %s" % x
+		elif x >= 1000 and x < 10000:
+			str_1 = "  %s" % x
+		else:
+			return(None)
+
+		fin_str = "%s%s" % (fin_str, str_1)
+	return(fin_str)
 
 
 master_list = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -128,7 +145,7 @@ while game == True:
 	input_1 = "None"
 	while input_1 != "w" and input_1 != "a" and input_1 != "s" and input_1 != "d":
 		print("")
-		input_1 = input(print("Use w, a, s, and, d, keys to play. "))
+		input_1 = input(print("Use w, a, s, and, d keys to play. "))
 		input_1 = input_1.lower()
 
 	if input_1 == "w":
@@ -330,10 +347,10 @@ while game == True:
 			win = True
 		else:
 			print("")
-			print(row_1)
-			print(row_2)
-			print(row_3)
-			print(row_4)
+			print(spacing(row_1))
+			print(spacing(row_2))
+			print(spacing(row_3))
+			print(spacing(row_4))
 
 	else:
 		game = False
