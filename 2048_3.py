@@ -233,16 +233,16 @@ while game == True:
 	y = 0
 	gen_count = 0
 	while y != 0 and gen_count < 100:
-                x = random.randint(0, 15)
+        x = random.randint(0, 15)
                 y = master_list[x]
                 gen_count = gen_count + 1
 
-        master_list[x] = 2
-        z = random.randint(0, 9)
+
+    z = random.randint(0, 9)
         if z == 0:
                 master_list[x] = 4
         else:
-                toggle = False
+                master_list[x] = 2
 
         temp_val = master_list[0]
         row_1[0] = temp_val
