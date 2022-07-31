@@ -274,30 +274,24 @@ while game == True:
 		print("Something went wrong.")
 
 
-	index_list = []
-	index_length = 0
-	for i in range (0, 16):
-		if master_list[i] == 0:
-			index_list.append(i)
-			index_length = index_length + 1
-		else:
-			toggle = False
+	gen_count = 0
+	y = None
+	while y != 0 and gen_count < 100:
+		x = random.randint(0, 15)
+		y = master_list[x]
+		gen_count = gen_count + 1
 
-	if index_length > 0:
-		high_int = 10 * index_length - 1
-		x = random.randint(0, high_int)
-		y = x % index_length
-		z = int((x - y)/index_length)
-		picker = index_list[y]
+	z = random.randint(0, 9)
+	if z == 0:
+		master_list[x] = 4
+		num = 4
+	else:
+		master_list[x] = 2
+		num = 2
 
-		if z == 0:
-			master_list[picker] = 4
-			num = 4
-		else:
-			master_list[picker] = 2
-			num = 2
+	if gen_count < 100:
 
-		y = base_4(y)
+		y = base_4(x)
 		ones = y % 10
 		tens = int((y - ones)/10)
 
