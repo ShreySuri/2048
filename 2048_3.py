@@ -69,7 +69,6 @@ def backward(list_1):
 
 
 master_list = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-highest_num = 0
 
 x = random.randint(0, 159)
 y = x % 16
@@ -308,46 +307,40 @@ while game == True:
         temp_val = master_list[15]
         row_4[3] = temp_val
         column_4[3] = temp_val
-        
-    
-    
-
-    
 
 
-    for i in range (0, 16):
-		x = master_list[i]
-		if x > highest_num:
-			highest_num = x
-		else:
-			toggle = True
+        final_check = False
+        for i in range (0, 4):
+                for j in range (0, 3):
+                        x = 4 * i + j
+                        if master_list[x] == master_list[x + 1]:
+                                final_check = True
+                        else:
+                                togggle = False
 
-	if highest_num == 2048:
-		game = False
-		win = True
+        for i in range (0, 4):
+                for j in range (0, 3):
+                        x = 4 * j + 1
+                        if master_list[x] == master_list[x + 4]:
+                                final_check = True
+                        else:
+                                toggle = False
 
-	elif gen_count == 100:
-        game = False
-        win = False
+        highest_num = 0
+        for i in range (0, 16):
+                x = master_list[i]
+                if x > highest_num:
+                        highest_num = x
+                else:
+                        toggle = True
 
-    final_check = False
-    for i in range (0, 4):
-    	for j in range (0, 3):
-    		x = 4 * i + j
-    		if master_list[x] == master_list[x + 1]:
-    			final_check = True
-    		else:
-    			final_check = final_check
+        if highest_num == 2048:
+                game = False
+                win = True
 
-    for i in range (0, 4):
-    	for j in range (0, 3):
-    		x = 4 * j + i
-    		if master_list[x] == master_list[x + 4]:
-    			final_check = True
-    		else:
-    			final_check = final_check
+        elif 
 
-    if final_check = True:
+        if final_check = True:
     	toggle = True:
     else:
     	game = False
