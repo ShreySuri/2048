@@ -67,21 +67,22 @@ def backward(list_1):
 	return(list_2)
 
 def spacing(list_1):
-	fin_str = ""
+	fin_str = "|"
 	for i in range (0, 4):
 		x = list_1[i]
 		if x >= 1 and x < 10:
-			str_1 = "     %s" % x 
+			str_1 = "   %s  " % x 
 		elif x >= 10 and x < 100:
-			str_1 = "    %s" % x
+			str_1 = "  %s  " % x
 		elif x >= 100 and x < 1000:
-			str_1 = "   %s" % x
+			str_1 = "  %s " % x
 		elif x >= 1000 and x < 10000:
-			str_1 = "  %s" % x
+			str_1 = " %s " % x
 		else:
-			return(None)
+			str_1 = "      "
 
 		fin_str = "%s%s" % (fin_str, str_1)
+	fin_str = "%s|" % fin_str
 	return(fin_str)
 
 
@@ -133,10 +134,10 @@ for i in range (0, 16):
 	else:
 		print("Something went wrong.")
 
-print(row_1)
-print(row_2)
-print(row_3)
-print(row_4)
+print(spacing(row_1))
+print(spacing(row_2))
+print(spacing(row_3))
+print(spacing(row_4))
 
 game = True
 
@@ -357,16 +358,13 @@ while game == True:
 		win = False
 
 
+score  = 0
+for i in range (0, 16):
+	score = score + master_list[i]
+
 if win == True:
 	print("")
-	print("You Won!")
+	print("You Won! Your score is %s" % score)
 else:
 	print("")
-	print("You Lost!")
-
-
-
-	
-
-
-
+	print("You Lost! Your score is %s" % score)
