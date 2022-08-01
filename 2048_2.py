@@ -140,20 +140,17 @@ print(spacing(row_3))
 print(spacing(row_4))
 
 game = True
+turns = 0
 
 print("")
-print("Use the w, a, s, d keys ti play.")
+print("Use the w, a, s, d keys to play.")
 
 while game == True:
 
-     score = 0
      input_1 = "None"
-     for i in range (0, 16):
-          score = score + master_list[i]
-
      while input_1 != "w" and input_1 != "a" and input_1 != "s" and input_1 != "d":
           print("")
-          input_1 = input(print("Current Score: %s " % score))
+          input_1 = input(print(""))
           input_1 = input_1.lower()
 
      if input_1 == "w":
@@ -356,6 +353,8 @@ while game == True:
           print(spacing(row_3))
           print(spacing(row_4))
 
+          turns = turns + 1
+
           if highest_num == 2048:
                game = False
                win = True
@@ -372,7 +371,7 @@ for i in range (0, 16):
 
 if win == True:
      print("")
-     print("You Won! Your score is %s" % score)
+     print("You Won! It took you %s turns. " % turns)
 else:
      print("")
-     print("You Lost! Your score is %s" % score)
+     print("You Lost! You survived %s turns. " % turns)
