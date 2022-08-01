@@ -141,12 +141,19 @@ print(spacing(row_4))
 
 game = True
 
+print("")
+print("Use the w, a, s, d keys ti play.")
+
 while game == True:
-     
+
+     score = 0
      input_1 = "None"
+     for i in range (0, 16):
+          score = score + master_list[i]
+
      while input_1 != "w" and input_1 != "a" and input_1 != "s" and input_1 != "d":
           print("")
-          input_1 = input(print("Use w, a, s, and, d keys to play. "))
+          input_1 = input(print("Current Score: %s " % score))
           input_1 = input_1.lower()
 
      if input_1 == "w":
@@ -360,7 +367,6 @@ while game == True:
           win = False
 
 
-score  = 0
 for i in range (0, 16):
      score = score + master_list[i]
 
