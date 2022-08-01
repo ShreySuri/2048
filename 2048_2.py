@@ -343,15 +343,20 @@ while game == True:
 			else:
 				toggle = True
 
+		final_check = 0
+
+		print("")
+		print(spacing(row_1))
+		print(spacing(row_2))
+		print(spacing(row_3))
+		print(spacing(row_4))
+
 		if highest_num == 2048:
 			game = False
 			win = True
-		else:
-			print("")
-			print(spacing(row_1))
-			print(spacing(row_2))
-			print(spacing(row_3))
-			print(spacing(row_4))
+		elif final_check == False:
+                        game = False
+                        win = False
 
 	else:
 		game = False
